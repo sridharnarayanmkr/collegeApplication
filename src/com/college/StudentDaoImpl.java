@@ -18,4 +18,10 @@ public class StudentDaoImpl implements StudentDao{
 		}
 	}
 
+	@Override
+	public void printRange(int num) {
+		// TODO Auto-generated method stub
+		list.stream().filter(x->x.rollNo>num).forEach(x->System.out.print(x));
+	}
+
 }

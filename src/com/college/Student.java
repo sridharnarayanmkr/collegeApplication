@@ -27,4 +27,9 @@ public class Student {
 	public Student() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", rollNo=" + rollNo + "]\n";
+	}
+	
 }

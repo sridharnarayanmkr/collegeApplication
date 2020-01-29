@@ -20,7 +20,8 @@ public class Initiate {
 		  
 		  do {
 			  System.out.println("-------------\n"
-			  		+ "Options Below\n1.Add Student to DB\n2.Display Student List\n3.Date Difference\n99.Exit\n"
+			  		+ "Options Below\n1.Add Student to DB\n2.Display Student List\n3.Date Difference\n"
+			  		+ "4.Pring Students with Roll Number greater than?: \n99.Exit\n"
 			  		+ "Choice Pls: ");
 			  choice=scan.nextInt();
 			  switch(choice) {
@@ -29,8 +30,12 @@ public class Initiate {
 			  break;
 			  case 2: studentDao.printList();
 			  break;
-			  case 3: dateDifference();
-			  break;
+			  case 3: 	//Used LocalDate to get the number of days between the given dates
+				  		dateDifference();
+				  		break;
+			  case 4: 	//Used Streams to print the students having rollNo greater than the passed argument (103)
+				  		studentDao.printRange(103);
+				  		break;
 			  default: break;
 			  }
 			  
